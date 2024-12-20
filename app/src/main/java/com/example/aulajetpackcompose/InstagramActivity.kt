@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.BottomAppBar
+import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.FloatingActionButton
@@ -20,8 +21,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.aulajetpackcompose.componentes.AreaDestaque
+import com.example.aulajetpackcompose.componentes.AreaPostagem
+import com.example.aulajetpackcompose.componentes.BarraInferior
+
 import com.example.aulajetpackcompose.componentes.BarraSuperior
 import com.example.aulajetpackcompose.model.Destaque
+import com.example.aulajetpackcompose.model.Postagem
 import com.example.aulajetpackcompose.ui.theme.AulaJetpackComposeTheme
 
 class InstagramActivity : ComponentActivity() {
@@ -55,6 +60,20 @@ class InstagramActivity : ComponentActivity() {
 
     )
 
+    private val listaPostagens = listOf(
+        Postagem(R.drawable.perfil_01, "José", R.drawable.floresta, "Descrição da postagem 1"),
+        Postagem(R.drawable.perfil_02, "Maria", R.drawable.praia, "Descrição da postagem 2"),
+        Postagem(R.drawable.perfil_03, "João", R.drawable.carro, "Descrição da postagem 3"),
+        Postagem(R.drawable.perfil_02, "Ana", R.drawable.praia, "Descrição da postagem 4"),
+        Postagem(R.drawable.perfil_01, "Pedro", R.drawable.floresta, "Descrição da postagem 5"),
+        Postagem(R.drawable.perfil_01, "José", R.drawable.floresta, "Descrição da postagem 1"),
+        Postagem(R.drawable.perfil_02, "Maria", R.drawable.praia, "Descrição da postagem 2"),
+        Postagem(R.drawable.perfil_03, "João", R.drawable.carro, "Descrição da postagem 3"),
+        Postagem(R.drawable.perfil_02, "Ana", R.drawable.praia, "Descrição da postagem 4"),
+        Postagem(R.drawable.perfil_01, "Pedro", R.drawable.floresta, "Descrição da postagem 5"),
+        Postagem(R.drawable.perfil_01, "José", R.drawable.floresta, "Descrição da postagem 1"),
+    )
+
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
@@ -65,7 +84,7 @@ class InstagramActivity : ComponentActivity() {
                     topBar = { BarraSuperior()},
                     bottomBar = {
                         BottomAppBar{
-                            Text(text = "Bottom App Bar")
+                            BarraInferior()
                         }
                     },
                     /*floatingActionButton = {
@@ -90,8 +109,11 @@ class InstagramActivity : ComponentActivity() {
             modifier = modifier
         ) {
             //Area Destaque
-            AreaDestaque(listaDestaques)
-            //Postagens
+            AreaDestaque(listaDestaques = listaDestaques)
+
+            Divider()
+            //Area de Postagens
+            AreaPostagem(listaPostagens = listaPostagens)
         }
     }
 
