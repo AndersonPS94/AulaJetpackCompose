@@ -1,4 +1,4 @@
-package com.example.aulajetpackcompose.model
+package com.example.aulajetpackcompose.data.model
 
 data class Postagem(
     val imagemPerfilRes: Int,

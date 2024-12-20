@@ -1,4 +1,4 @@
-package com.example.aulajetpackcompose.componentes
+package com.example.aulajetpackcompose.ui.view.componentes
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

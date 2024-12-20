@@ -1,4 +1,4 @@
-package com.example.aulajetpackcompose.componentes
+package com.example.aulajetpackcompose.ui.view.componentes
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -16,8 +16,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.aulajetpackcompose.model.Destaque
-import com.example.aulajetpackcompose.model.Postagem
+import com.example.aulajetpackcompose.data.model.Destaque
+import com.example.aulajetpackcompose.data.model.Postagem
 
 @Composable
 fun ItemPostagem(

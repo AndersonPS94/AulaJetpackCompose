@@ -1,34 +1,30 @@
-package com.example.aulajetpackcompose
+package com.example.aulajetpackcompose.ui.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FabPosition
-import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.aulajetpackcompose.componentes.AreaDestaque
-import com.example.aulajetpackcompose.componentes.AreaPostagem
-import com.example.aulajetpackcompose.componentes.BarraInferior
+import com.example.aulajetpackcompose.R
+import com.example.aulajetpackcompose.ui.view.componentes.AreaDestaque
+import com.example.aulajetpackcompose.ui.view.componentes.AreaPostagem
+import com.example.aulajetpackcompose.ui.view.componentes.BarraInferior
 
-import com.example.aulajetpackcompose.componentes.BarraSuperior
-import com.example.aulajetpackcompose.model.Destaque
-import com.example.aulajetpackcompose.model.Postagem
+import com.example.aulajetpackcompose.ui.view.componentes.BarraSuperior
+import com.example.aulajetpackcompose.data.model.Destaque
+import com.example.aulajetpackcompose.data.model.Postagem
 import com.example.aulajetpackcompose.ui.theme.AulaJetpackComposeTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class InstagramActivity : ComponentActivity() {
 
     private val listaDestaques = listOf(
@@ -81,7 +77,7 @@ class InstagramActivity : ComponentActivity() {
         setContent {
             AulaJetpackComposeTheme {
                 Scaffold (
-                    topBar = { BarraSuperior()},
+                    topBar = { BarraSuperior() },
                     bottomBar = {
                         BottomAppBar{
                             BarraInferior()
