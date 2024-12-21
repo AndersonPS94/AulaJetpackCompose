@@ -33,7 +33,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.aulajetpackcompose.R
-import com.example.aulajetpackcompose.data.model.Usuario
+import com.example.aulajetpackcompose.data.remote.model.Usuario
 import com.example.aulajetpackcompose.ui.theme.AulaJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {

@@ -16,8 +16,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.aulajetpackcompose.data.model.Destaque
-import com.example.aulajetpackcompose.data.model.Postagem
+import com.example.aulajetpackcompose.data.remote.model.Destaque
+import com.example.aulajetpackcompose.data.remote.model.Postagem
 
 @Composable
 fun ItemPostagem(
@@ -31,6 +31,7 @@ fun ItemPostagem(
     ) {
 
         //informacoes de perfil
+
         Row(
             modifier = Modifier.padding(16.dp, 8.dp),
             verticalAlignment = Alignment.CenterVertically
@@ -48,7 +49,7 @@ fun ItemPostagem(
                 modifier = Modifier.padding(start = 8.dp),
                 style = MaterialTheme.typography.titleMedium)
             //informacoes de postagem
-
+        }
             Image(
                 modifier = Modifier
                     .fillMaxWidth(),
@@ -56,6 +57,6 @@ fun ItemPostagem(
                 contentScale = ContentScale.Crop
             )
             Text(text = postagem.descricao, style = MaterialTheme.typography.titleMedium)
-        }
+
     }
 }

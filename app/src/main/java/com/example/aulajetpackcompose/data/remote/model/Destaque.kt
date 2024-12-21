@@ -1,4 +1,4 @@
-package com.example.aulajetpackcompose.data.model
+package com.example.aulajetpackcompose.data.remote.model
 
 data class Destaque(
     val imagemPerfilRes: Int,
