@@ -1,6 +1,7 @@
 package com.example.aulajetpackcompose.ui.view.componentes
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -10,9 +11,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
 import com.example.aulajetpackcompose.data.remote.dto.User
 import com.example.aulajetpackcompose.data.remote.model.Destaque
 
@@ -25,15 +28,17 @@ fun ItemDestaque(
         Column(
             modifier = modifier.padding(horizontal = 8.dp)
         ) {
-            /*Image(
+            AsyncImage(
+                model = usuario.image,
                 modifier = Modifier
+                    .background(Color.LightGray,CircleShape)
                     .size(56.dp)
                     .clip(CircleShape),
-                painter = painterResource(id = destaque.imagemPerfilRes),
                 contentDescription = null,
                 contentScale = ContentScale.Crop
-            )*/
+            )
                 Text(
+                    modifier = Modifier.padding(top = 8.dp, start = 6.dp),
                     text = usuario.firstName,
                     style = MaterialTheme.typography.titleMedium
                 )
