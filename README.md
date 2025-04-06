@@ -6,6 +6,12 @@ Este repositório contém um projeto de exemplo que explora o uso do Jetpack Com
 
 ## 📸 Demonstração
 
+<img src="https://github.com/user-attachments/assets/710bdd23-5b2d-418d-8011-4d70b4f90e34" width="230">
+&nbsp;&nbsp;
+
+<img src="https://github.com/user-attachments/assets/653030ed-dd67-47e1-b3df-dd05b187453a" width="230">
+&nbsp;&nbsp;
+
 
 
 ---
@@ -20,18 +26,18 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ---
 
-📄 Aprendizados
+## 📄 Aprendizados
 Durante o desenvolvimento deste projeto, foram abordados os seguintes tópicos:
 
-Implementação de interfaces utilizando Jetpack Compose.
+✅ Implementação de interfaces utilizando Jetpack Compose.
 
-Gerenciamento de estado com ViewModel e LiveData.
+✅ Gerenciamento de estado com ViewModel e LiveData.
 
-Consumo de APIs REST utilizando Retrofit.
+✅ Consumo de APIs REST utilizando Retrofit.
 
-Injeção de dependências com Hilt.
+✅ Injeção de dependências com Hilt.
 
-Navegação entre telas utilizando o Navigation Component.
+✅ Navegação entre telas utilizando o Navigation Component.
 
 ---
 
